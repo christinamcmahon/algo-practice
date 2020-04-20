@@ -3,13 +3,11 @@ function isMatch(text, pattern) {
     // if text is empty but pattern is not empty, return false
     // if both are empty, return true
     // if pattern is empty, return false (?) 
-    if (pattern.length < text.length) {
-        return false
-    }
     // track indexes of text and pattern 
     let textIndex = 0
     // if pattern[i] is a ".", then skip an index in text and move on
-    for (let i = 0; i < pattern.length; i++) {
+    let len = pattern.length > text.length ? pattern.length : text.length
+    for (let i = 0; i < len; i++) {
         if (pattern[i] === text[textIndex] || pattern[i] === ".") {
             textIndex++
         } else if (pattern[i] === "*") {
@@ -28,9 +26,3 @@ function isMatch(text, pattern) {
     // if you ever get through all of those without a match, return false
     // if you reach the end of both, return true
 }
-
-  // examples:
-  // isMatch("aa", "a") => false
-  // isMatch("abc", "a.c") => true
-  // isMatch("abbb", "ab*") => true
-  // isMatch("acd", "ab*c.") => true
