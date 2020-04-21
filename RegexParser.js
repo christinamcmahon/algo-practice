@@ -1,3 +1,6 @@
+// implement a regex expression function that supports the '.' and '*' symbols
+// return true if the text matches the pattern as a regular expression
+
 function isMatch(text, pattern) {
     // edge cases: empty text or pattern, pattern is just "*"
     // if text is empty but pattern is not empty, return false
