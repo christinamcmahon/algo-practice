@@ -1,3 +1,5 @@
+// Given a 2d array of 0's and 1's, return the number of "islands" of 1's
+
 function getNumberOfIslands(binaryMatrix) {
     // track number of islands
     let numIslands = 0
